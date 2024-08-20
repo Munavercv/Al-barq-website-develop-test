@@ -35,7 +35,7 @@
     });
 
     //Main navigation Active Class Add Remove
-    $(".navbar-toggler").on("click", function () {
+    /*$(".navbar-toggler").on("click", function () {
         $("header").toggleClass("active");
     });
     $(document).on("ready", function () {
@@ -47,7 +47,7 @@
                 $("header").removeClass("active");
             }
         });
-    });
+    });*/
 
         // menu js
 
@@ -67,16 +67,16 @@
 
     //  preloader function
 
-     function hidePreloaderAndShowContent() {
-        var preloader = document.getElementById('loader');
-        var content = document.getElementById('main-body');
+    //  function hidePreloaderAndShowContent() {
+    //     var preloader = document.getElementById('loader');
+    //     var content = document.getElementById('main-body');
 
-        preloader.style.display = 'none';
+    //     preloader.style.display = 'none';
 
-        content.style.display = 'block';
-    }
+    //     content.style.display = 'block';
+    // }
 
-    setTimeout(hidePreloaderAndShowContent, 3000);
+    // setTimeout(hidePreloaderAndShowContent, 3000);
 
     //  preloader function
 
@@ -131,3 +131,31 @@
         });
     });
     // owl carosel
+
+
+
+    // NAVBAR DROPDOWN TOGGLE
+    let dropdownLink = document.getElementById('navbarDropdownMenuLink');
+    let dropmenu = document.getElementById('dropmenu');
+    let flag = false;
+    
+    dropdownLink.addEventListener('mouseover', function () {
+        dropmenu.style.opacity = 1;
+        flag = true;
+    });
+
+    dropdownLink.addEventListener('mouseleave', function () {
+        dropmenu.style.opacity = 0;
+    });
+    
+    dropmenu.addEventListener('mouseover', function () {
+        if (flag) {
+            dropmenu.style.opacity = 1;
+        }
+    });
+
+    dropmenu.addEventListener('mouseleave', function () {
+        dropmenu.style.opacity = 0;
+        flag = false;
+    });
+    // NAVBAR DROPDOWN TOGGLE

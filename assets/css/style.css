@@ -4491,8 +4491,8 @@ fieldset:disabled .btn {
   overflow-y: auto
 }
 
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
+.dropdown-menu {
+  /* opacity: 1; */
   visibility: visible;
 }
 
